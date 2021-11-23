@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import {bands} from '../data/bands'
+import BandFile from './BandFile';
 
 class BandsState extends Component {
 
@@ -13,7 +14,7 @@ class BandsState extends Component {
     render(){
         return(
             <>
-                <p>What do we have here??</p>
+                <BandFile bands={this.state.bands} />
             </>
         )
     }
