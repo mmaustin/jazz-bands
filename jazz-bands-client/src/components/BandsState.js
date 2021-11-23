@@ -13,7 +13,7 @@ class BandsState extends Component {
     render(){
         return(
             <div>
-                
+                <p>What do we have here??</p>
             </div>
         )
     }

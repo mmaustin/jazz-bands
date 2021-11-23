@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-//import RouterComponent from './RouterComponent';
+import BandsState from './BandsState';
 
 
 class App extends Component {
@@ -9,7 +9,7 @@ class App extends Component {
 
     return (
       <>
-        
+        <BandsState />
       </>
     );
   }
