@@ -6,9 +6,9 @@ const Band = ({band}) => {
             <li>
                 {band.band}
             </li>
-            <p>
-                {band.personnel.map(p => p.name)}
-            </p>
+            {band.personnel.map((member, index) => (
+                <Personnel key={index} member={member} />
+            ))}
         </>
     )
 }
