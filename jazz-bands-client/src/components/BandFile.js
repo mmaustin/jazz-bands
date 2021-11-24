@@ -1,122 +1,127 @@
-import React from 'react'
+import React, {Component} from 'react'
 //import Band from './Band'
 
-const BandFile = ({handleChange, state}) => {
+class BandFile extends Component {
     /*this.handleSubmit = (event) => {
         event.preventDefault();
         let formData = {
-          firstName: this.state.firstName,
-          lastName: this.state.lastName,
+          firstName: this.this.props.state.firstName,
+          lastName: this.this.props.state.lastName,
         };
-        let dataArray = this.state.submittedData.concat(formData);
-        this.setState({ submittedData: dataArray });
+        let dataArray = this.this.props.state.submittedData.concat(formData);
+        this.setthis.props.State({ submittedData: dataArray });
       };*/
 
     
-    this.handleSubmit =(e) => {
+    handleSubmit = (e) => {
         e.preventDefault();
         let formData = {
-            bandName: state.bandName,
-            playerOne: {name: state.playerOne.name, instrument: state.playerOne.instrument},
-            playerTwo: {name: state.playerTwo.name, instrument: state.playerTwo.instrument},
-            playerThree: {name: state.playerThree.name, instrument: state.playerThree.instrument},
-            playerFour: {name: state.playerFour.name, instrument: state.playerFour.instrument},
-            playerFive: {name: state.playerFive.name, instrument: state.playerFive.instrument},
-            signatureSong: state.signatureSong
-        }
+            bandName: this.props.state.bandName,
+            playerOne: {name: this.props.state.playerOne.name, instrument: this.props.state.playerOne.instrument},
+            playerTwo: {name: this.props.state.playerTwo.name, instrument: this.props.state.playerTwo.instrument},
+            playerThree: {name: this.props.state.playerThree.name, instrument: this.props.state.playerThree.instrument},
+            playerFour: {name: this.props.state.playerFour.name, instrument: this.props.state.playerFour.instrument},
+            playerFive: {name: this.props.state.playerFive.name, instrument: this.props.state.playerFive.instrument},
+            signatureSong: this.props.state.signatureSong
+        };
+        let data = this.props.state.allBands.concat(formData);
+        this.setthis.props.State({allBands: data})
+        console.log(this.props.state.allBands)
     }
 
-    
+    render() {
     return(
         <div>
-            <form onSubmit={this.handleSubmit.bind(this)}>
+            <form onSubmit={this.handleSubmit}>
                 Band Name:
                 <input
                     type='text'
                     name='bandName'
-                    onChange={handleChange}
-                    value={state.bandName}
+                    onChange={this.props.handleChange}
+                    value={this.props.state.bandName}
                 />
                 Name:
                 <input
                     type='text'
                     name='playerOne'
-                    onChange={handleChange}
-                    value={state.playerOne.name}
+                    onChange={this.props.handleChange}
+                    value={this.props.state.playerOne.name}
                 />
                 Instrument:
                 <input
                     type='text'
                     name='playerOne'
-                    onChange={handleChange}
-                    value={state.playerOne.instrument}
+                    onChange={this.props.handleChange}
+                    value={this.props.state.playerOne.instrument}
                 />
                 Name:
                 <input
                     type='text'
                     name='playerTwo'
-                    onChange={handleChange}
-                    value={state.playerTwo.name}
+                    onChange={this.props.handleChange}
+                    value={this.props.state.playerTwo.name}
                 />
                 Instrument:
                 <input
                     type='text'
                     name='playerTwo'
-                    onChange={handleChange}
-                    value={state.playerTwo.instrument}
+                    onChange={this.props.handleChange}
+                    value={this.props.state.playerTwo.instrument}
                 />
                 Name:
                 <input
                     type='text'
                     name='playerThree'
-                    onChange={handleChange}
-                    value={state.playerThree.name}
+                    onChange={this.props.handleChange}
+                    value={this.props.state.playerThree.name}
                 />
                 Instrument:
                 <input
                     type='text'
                     name='playerThree'
-                    onChange={handleChange}
-                    value={state.playerThree.instrument}
+                    onChange={this.props.handleChange}
+                    value={this.props.state.playerThree.instrument}
                 />
                 Name:
                 <input
                     type='text'
                     name='playerFour'
-                    onChange={handleChange}
-                    value={state.playerFour.name}
+                    onChange={this.props.handleChange}
+                    value={this.props.state.playerFour.name}
                 />
                 Instrument:
                 <input
                     type='text'
                     name='playerFour'
-                    onChange={handleChange}
-                    value={state.playerFour.instrument}
+                    onChange={this.props.handleChange}
+                    value={this.props.state.playerFour.instrument}
                 />
                 Name:
                 <input
                     type='text'
                     name='playerFive'
-                    onChange={handleChange}
-                    value={state.playerFive.name}
+                    onChange={this.props.handleChange}
+                    value={this.props.state.playerFive.name}
                 />
                 Instrument:
                 <input
                     type='text'
                     name='playerFive'
-                    onChange={handleChange}
-                    value={state.playerFive.instrument}
+                    onChange={this.props.handleChange}
+                    value={this.props.state.playerFive.instrument}
                 />
                 Signature Song:
                 <input
                     type='text'
                     name='signatureSong'
-                    onChange={handleChange}
-                    value={state.signatureSong}
+                    onChange={this.props.handleChange}
+                    value={this.props.state.signatureSong}
                 />
+                <input type="submit"/>
             </form>
         </div>
     )
+    }
 }
 
 export default BandFile
