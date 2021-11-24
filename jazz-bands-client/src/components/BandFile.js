@@ -9,7 +9,7 @@ class BandFile extends Component {
           lastName: this.this.props.state.lastName,
         };
         let dataArray = this.this.props.state.submittedData.concat(formData);
-        this.setthis.props.State({ submittedData: dataArray });
+        this.setState({ submittedData: dataArray });
       };*/
 
     
@@ -25,8 +25,8 @@ class BandFile extends Component {
             signatureSong: this.props.state.signatureSong
         };
         let data = this.props.state.allBands.concat(formData);
-        this.setthis.props.State({allBands: data})
-        console.log(this.props.state.allBands)
+        this.setState({allBands: data})
+        console.log(data)
     }
 
     render() {
