@@ -12,7 +12,8 @@ class BandsState extends Component {
             playerThree: {name: "", instrument: ""},
             playerFour: {name: "", instrument: ""},
             playerFive: {name: "", instrument: ""},
-            signatureSong: ""
+            signatureSong: "",
+            allBands: []
         }
     }
 
