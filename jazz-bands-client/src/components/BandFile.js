@@ -17,11 +17,11 @@ class BandFile extends Component {
         e.preventDefault();
         let formData = {
             bandName: this.props.state.bandName,
-            playerOne: {name: this.props.state.playerOne.name, instrument: this.props.state.playerOne.instrument},
-            playerTwo: {name: this.props.state.playerTwo.name, instrument: this.props.state.playerTwo.instrument},
-            playerThree: {name: this.props.state.playerThree.name, instrument: this.props.state.playerThree.instrument},
-            playerFour: {name: this.props.state.playerFour.name, instrument: this.props.state.playerFour.instrument},
-            playerFive: {name: this.props.state.playerFive.name, instrument: this.props.state.playerFive.instrument},
+            playerOne: this.props.state.playerOne,
+            playerTwo: this.props.state.playerTwo,
+            playerThree: this.props.state.playerThree,
+            playerFour: this.props.state.playerFour,
+            playerFive: this.props.state.playerFive,
             signatureSong: this.props.state.signatureSong
         };
         let data = this.props.state.allBands.concat(formData);
