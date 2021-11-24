@@ -1,12 +1,10 @@
 import React from 'react'
-import Band from './Band'
+//import Band from './Band'
 
-const BandFile = ({bands}) => {
+const BandFile = () => {
     return(
         <>
-            {bands.map((band, index) => (
-                <Band key={index} band={band} />
-            ))}
+            
         </>
     )
 }
