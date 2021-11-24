@@ -7,11 +7,11 @@ class BandsState extends Component {
         super();
         this.state = {
             bandName: "",
-            playerOne: {name: "", instrument: ""},
-            playerTwo: {name: "", instrument: ""},
-            playerThree: {name: "", instrument: ""},
-            playerFour: {name: "", instrument: ""},
-            playerFive: {name: "", instrument: ""},
+            playerOne: "",
+            playerTwo: "",
+            playerThree: "",
+            playerFour: "",
+            playerFive:  "",
             signatureSong: "",
             allBands: []
         }
