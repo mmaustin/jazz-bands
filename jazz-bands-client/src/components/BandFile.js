@@ -5,6 +5,84 @@ const BandFile = ({handleChange, state}) => {
     return(
         <div>
             <form>
+                Band Name:
+                <input
+                    type='text'
+                    name='bandName'
+                    onChange={handleChange}
+                    value={state.bandName}
+                />
+                Band Name:
+                <input
+                    type='text'
+                    name='bandName'
+                    onChange={handleChange}
+                    value={state.bandName}
+                />
+                Band Name:
+                <input
+                    type='text'
+                    name='bandName'
+                    onChange={handleChange}
+                    value={state.bandName}
+                />
+                Band Name:
+                <input
+                    type='text'
+                    name='bandName'
+                    onChange={handleChange}
+                    value={state.bandName}
+                />
+                Band Name:
+                <input
+                    type='text'
+                    name='bandName'
+                    onChange={handleChange}
+                    value={state.bandName}
+                />
+                Band Name:
+                <input
+                    type='text'
+                    name='bandName'
+                    onChange={handleChange}
+                    value={state.bandName}
+                />
+                Band Name:
+                <input
+                    type='text'
+                    name='bandName'
+                    onChange={handleChange}
+                    value={state.bandName}
+                />
+                Band Name:
+                <input
+                    type='text'
+                    name='bandName'
+                    onChange={handleChange}
+                    value={state.bandName}
+                />
+                Band Name:
+                <input
+                    type='text'
+                    name='bandName'
+                    onChange={handleChange}
+                    value={state.bandName}
+                />
+                Band Name:
+                <input
+                    type='text'
+                    name='bandName'
+                    onChange={handleChange}
+                    value={state.bandName}
+                />
+                Band Name:
+                <input
+                    type='text'
+                    name='bandName'
+                    onChange={handleChange}
+                    value={state.bandName}
+                />
+                Band Name:
                 <input
                     type='text'
                     name='bandName'
@@ -18,21 +96,3 @@ const BandFile = ({handleChange, state}) => {
 
 export default BandFile
 
-/*
-      <div>
-        <form>
-          <input
-            type="text"
-            name="firstName"
-            onChange={(event) => this.props.handleChange(event)}
-            value={this.props.formData.firstName}
-          />
-          <input
-            type="text"
-            name="lastName"
-            onChange={(event) => this.props.handleChange(event)}
-            value={this.props.formData.lastName}
-          />
-        </form>
-      </div>
-*/
