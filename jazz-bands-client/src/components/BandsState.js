@@ -24,9 +24,7 @@ class BandsState extends Component {
 
     render(){
         return(
-            <>
-                <BandFile />
-            </>
+            <BandFile handleChange={this.handleChange} state={this.state}/>
         )
     }
 
