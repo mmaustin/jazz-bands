@@ -27,6 +27,7 @@ class BandFile extends Component {
         let data = this.props.state.allBands.concat(formData);
         this.setState({allBands: data})
         console.log(data)
+    
     }
 
     render() {
