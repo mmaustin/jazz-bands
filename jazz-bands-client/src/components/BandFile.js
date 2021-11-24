@@ -12,82 +12,82 @@ const BandFile = ({handleChange, state}) => {
                     onChange={handleChange}
                     value={state.bandName}
                 />
-                Band Name:
+                Name:
                 <input
                     type='text'
-                    name='bandName'
+                    name='playerOne'
                     onChange={handleChange}
-                    value={state.bandName}
+                    value={state.playerOne.name}
                 />
-                Band Name:
+                Instrument:
                 <input
                     type='text'
-                    name='bandName'
+                    name='playerOne'
                     onChange={handleChange}
-                    value={state.bandName}
+                    value={state.playerOne.instrument}
                 />
-                Band Name:
+                Name:
                 <input
                     type='text'
-                    name='bandName'
+                    name='playerTwo'
                     onChange={handleChange}
-                    value={state.bandName}
+                    value={state.playerTwo.name}
                 />
-                Band Name:
+                Instrument:
                 <input
                     type='text'
-                    name='bandName'
+                    name='playerTwo'
                     onChange={handleChange}
-                    value={state.bandName}
+                    value={state.playerTwo.instrument}
                 />
-                Band Name:
+                Name:
                 <input
                     type='text'
-                    name='bandName'
+                    name='playerThree'
                     onChange={handleChange}
-                    value={state.bandName}
+                    value={state.playerThree.name}
                 />
-                Band Name:
+                Instrument:
                 <input
                     type='text'
-                    name='bandName'
+                    name='playerThree'
                     onChange={handleChange}
-                    value={state.bandName}
+                    value={state.playerThree.instrument}
                 />
-                Band Name:
+                Name:
                 <input
                     type='text'
-                    name='bandName'
+                    name='playerFour'
                     onChange={handleChange}
-                    value={state.bandName}
+                    value={state.playerFour.name}
                 />
-                Band Name:
+                Instrument:
                 <input
                     type='text'
-                    name='bandName'
+                    name='playerFour'
                     onChange={handleChange}
-                    value={state.bandName}
+                    value={state.playerFour.instrument}
                 />
-                Band Name:
+                Name:
                 <input
                     type='text'
-                    name='bandName'
+                    name='playerFive'
                     onChange={handleChange}
-                    value={state.bandName}
+                    value={state.playerFive.name}
                 />
-                Band Name:
+                Instrument:
                 <input
                     type='text'
-                    name='bandName'
+                    name='playerFive'
                     onChange={handleChange}
-                    value={state.bandName}
+                    value={state.playerFive.instrument}
                 />
-                Band Name:
+                Signature Song:
                 <input
                     type='text'
-                    name='bandName'
+                    name='signatureSong'
                     onChange={handleChange}
-                    value={state.bandName}
+                    value={state.signatureSong}
                 />
             </form>
         </div>
