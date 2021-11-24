@@ -6,7 +6,13 @@ class BandsState extends Component {
     constructor(){
         super();
         this.state = {
-
+            bandName: "",
+            playerOne: {name: "", instrument: ""},
+            playerTwo: {name: "", instrument: ""},
+            playerThree: {name: "", instrument: ""},
+            playerFour: {name: "", instrument: ""},
+            playerFive: {name: "", instrument: ""},
+            signatureSong: ""
         }
     }
 
