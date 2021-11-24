@@ -45,70 +45,35 @@ class BandFile extends Component {
                     type='text'
                     name='playerOne'
                     onChange={this.props.handleChange}
-                    value={this.props.state.playerOne.name}
-                />
-                Instrument:
-                <input
-                    type='text'
-                    name='playerOne'
-                    onChange={this.props.handleChange}
-                    value={this.props.state.playerOne.instrument}
+                    value={this.props.state.playerOne}
                 />
                 Name:
                 <input
                     type='text'
                     name='playerTwo'
                     onChange={this.props.handleChange}
-                    value={this.props.state.playerTwo.name}
-                />
-                Instrument:
-                <input
-                    type='text'
-                    name='playerTwo'
-                    onChange={this.props.handleChange}
-                    value={this.props.state.playerTwo.instrument}
+                    value={this.props.state.playerTwo}
                 />
                 Name:
                 <input
                     type='text'
                     name='playerThree'
                     onChange={this.props.handleChange}
-                    value={this.props.state.playerThree.name}
-                />
-                Instrument:
-                <input
-                    type='text'
-                    name='playerThree'
-                    onChange={this.props.handleChange}
-                    value={this.props.state.playerThree.instrument}
+                    value={this.props.state.playerThree}
                 />
                 Name:
                 <input
                     type='text'
                     name='playerFour'
                     onChange={this.props.handleChange}
-                    value={this.props.state.playerFour.name}
-                />
-                Instrument:
-                <input
-                    type='text'
-                    name='playerFour'
-                    onChange={this.props.handleChange}
-                    value={this.props.state.playerFour.instrument}
+                    value={this.props.state.playerFour}
                 />
                 Name:
                 <input
                     type='text'
                     name='playerFive'
                     onChange={this.props.handleChange}
-                    value={this.props.state.playerFive.name}
-                />
-                Instrument:
-                <input
-                    type='text'
-                    name='playerFive'
-                    onChange={this.props.handleChange}
-                    value={this.props.state.playerFive.instrument}
+                    value={this.props.state.playerFive}
                 />
                 Signature Song:
                 <input
