@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import BandFile from './BandFile';
-import Bands from './Bands';
+//import Bands from './Bands';
 
 class BandsState extends Component {
 
@@ -29,7 +29,7 @@ class BandsState extends Component {
         return(
             <div>
                 <BandFile handleChange={this.handleChange} state={this.state}/>
-                {this.state.allBands.map((band, index) => <Bands key={index} band={band}/>)}
+                {/*<p>{this.state.allBands.map((band, index) => <Bands key={index} band={band}/>)}</p>*/}
                 
             </div>
         )

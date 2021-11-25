@@ -5,6 +5,7 @@ const Bands = ({band}) => {
     return(
         <>
             <p>{band.bandName}</p>
+            <p>{band.playerThree}</p>
         </>
     )
 }

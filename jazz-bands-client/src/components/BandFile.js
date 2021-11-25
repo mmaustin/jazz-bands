@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-//import Band from './Band'
+import Bands from './Bands'
 
 class BandFile extends Component {
     /*this.handleSubmit = (event) => {
@@ -25,7 +25,7 @@ class BandFile extends Component {
             signatureSong: this.props.state.signatureSong
         };
         let data = this.props.state.allBands.concat(formData);
-        console.log(this.props.state.allBands = data);
+         this.props.state.allBands = data;
         
     
     }
@@ -85,6 +85,7 @@ class BandFile extends Component {
                 />
                 <input type="submit"/>
             </form>
+            {this.props.state.allBands.map((band, index) => <Bands key={index} band={band}/>)}
         </div>
     )
     }
