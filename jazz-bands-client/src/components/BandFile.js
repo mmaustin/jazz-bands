@@ -25,16 +25,12 @@ class BandFile extends Component {
             signatureSong: this.props.state.signatureSong
         };
         let data = this.props.state.allBands.concat(formData);
-        //this.setState({props.state.allBands: data}, () => console.log(data))
-       console.log(this.props.state.allBands = data);
+        console.log(this.props.state.allBands = data);
         
     
     }
 
     render() {
-        let a = this.props.state.allBands.map((b, i) => {
-            return <li>{b.bandName}</li>
-        })
     return(
         <div>
             <form onSubmit={this.handleSubmit}>
@@ -89,7 +85,6 @@ class BandFile extends Component {
                 />
                 <input type="submit"/>
             </form>
-            <p>{a}</p>
         </div>
     )
     }
