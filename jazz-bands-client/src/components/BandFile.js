@@ -32,6 +32,9 @@ class BandFile extends Component {
     }
 
     render() {
+        let a = this.props.state.allBands.map((b, i) => {
+            return <li>{b.bandName}</li>
+        })
     return(
         <div>
             <form onSubmit={this.handleSubmit}>
@@ -86,6 +89,7 @@ class BandFile extends Component {
                 />
                 <input type="submit"/>
             </form>
+            <p>{a}</p>
         </div>
     )
     }
