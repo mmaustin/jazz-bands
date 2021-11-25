@@ -25,8 +25,9 @@ class BandFile extends Component {
             signatureSong: this.props.state.signatureSong
         };
         let data = this.props.state.allBands.concat(formData);
-        this.setState({allBands: data})
-        console.log(data)
+        //this.setState({props.state.allBands: data}, () => console.log(data))
+       console.log(this.props.state.allBands = data);
+        
     
     }
 
