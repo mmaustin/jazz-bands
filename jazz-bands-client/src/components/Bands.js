@@ -1,12 +1,10 @@
 import React from 'react'
-import Band from './Band'
+//import Band from './Band'
 
-const Bands = ({bands}) => {
+const Bands = ({band}) => {
     return(
         <>
-            {bands.map((band, index) => {
-                return <Band key={index} band={band} />
-            })}
+            <p>{band.bandName}</p>
         </>
     )
 }

@@ -25,10 +25,12 @@ class BandsState extends Component {
     }
 
     render(){
+
         return(
             <div>
                 <BandFile handleChange={this.handleChange} state={this.state}/>
-                <Bands bands={this.state.allBands} />
+                {this.state.allBands.map((band, index) => <Bands key={index} band={band}/>)}
+                
             </div>
         )
     }
