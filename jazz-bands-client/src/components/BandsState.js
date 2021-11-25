@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import BandFile from './BandFile';
+import Bands from './Bands';
 
 class BandsState extends Component {
 
@@ -25,7 +26,10 @@ class BandsState extends Component {
 
     render(){
         return(
-            <BandFile handleChange={this.handleChange} state={this.state}/>
+            <div>
+                <BandFile handleChange={this.handleChange} state={this.state}/>
+                <Bands bands={this.state.allBands} />
+            </div>
         )
     }
 
