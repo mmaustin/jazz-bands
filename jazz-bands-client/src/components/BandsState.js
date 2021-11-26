@@ -51,35 +51,35 @@ class BandsState extends Component {
                         onChange={this.handleChange}
                         value={this.state.bandName}
                     />
-                    Name:
+                    Trumpet:
                     <input
                         type='text'
                         name='playerOne'
                         onChange={this.handleChange}
                         value={this.state.playerOne}
                     />
-                    Name:
+                    Saxophone:
                     <input
                         type='text'
                         name='playerTwo'
                         onChange={this.handleChange}
                         value={this.state.playerTwo}
                     />
-                    Name:
+                    Piano:
                     <input
                         type='text'
                         name='playerThree'
                         onChange={this.handleChange}
                         value={this.state.playerThree}
                     />
-                    Name:
+                    Bass:
                     <input
                         type='text'
                         name='playerFour'
                         onChange={this.handleChange}
                         value={this.state.playerFour}
                     />
-                    Name:
+                    Drums:
                     <input
                         type='text'
                         name='playerFive'
