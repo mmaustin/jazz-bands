@@ -18,6 +18,14 @@ class BandsState extends Component {
         }
     }
 
+    /*componentDidMount(){
+        this.interval = setInterval(this.showSaying, 5000)
+    }*/
+
+    showSaying = () => {
+        return "Will Component Mount?"
+    }
+
     handleSubmit = (e) => {
         e.preventDefault();
         let formData = {
@@ -95,6 +103,7 @@ class BandsState extends Component {
                     />
                     <input type="submit"/>
                 </form> 
+                <p>{this.showSaying()}</p>
                 {this.state.allBands.map((band, index) => <Band key={index} band={band}/>)}           
             </div>
         )
