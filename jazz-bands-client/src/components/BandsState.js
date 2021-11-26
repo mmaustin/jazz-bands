@@ -18,15 +18,22 @@ class BandsState extends Component {
         }
     }
 
-/*    componentDidMount(){
-        this.interval = setInterval(this.showSaying, 5000)
+    componentDidMount(){
+        this.interval = setInterval(this.changeText, 5000)
     }
 
-    showSaying = () => {
-        console.log("Will Component Mount?") ;
+    changeText = () => {
+        
+        let a = document.getElementsByClassName('colorChange');
+        console.log(a.innterHTML += " or is it?")
+        /*if (a.style.backgroundColor === 'red'){
+            a.style.backgroundColor = 'blue';
+        } else {
+            a.style.backgroundColor = 'red';
+        }*/
     }
 
-*/
+
 
     handleSubmit = (e) => {
         e.preventDefault();
@@ -105,7 +112,7 @@ class BandsState extends Component {
                     />
                     <input type="submit"/>
                 </form> 
-                {/*<p>{this.showSaying(' It should.')}</p>*/}
+                <p className="colorChange">This is always here.</p>
                 {this.state.allBands.map((band, index) => <Band key={index} band={band}/>)}           
             </div>
         )
