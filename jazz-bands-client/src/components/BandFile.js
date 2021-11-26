@@ -1,17 +1,7 @@
-import React, {Component} from 'react'
+/* import React, {Component} from 'react'
 import Bands from './Bands'
 
 class BandFile extends Component {
-    /*this.handleSubmit = (event) => {
-        event.preventDefault();
-        let formData = {
-          firstName: this.this.props.state.firstName,
-          lastName: this.this.props.state.lastName,
-        };
-        let dataArray = this.this.props.state.submittedData.concat(formData);
-        this.setState({ submittedData: dataArray });
-      };*/
-
     
     handleSubmit = (e) => {
         e.preventDefault();
@@ -26,8 +16,6 @@ class BandFile extends Component {
         };
         let data = this.props.state.allBands.concat(formData);
          this.props.state.allBands = data;
-        
-    
     }
 
     render() {
@@ -92,4 +80,4 @@ class BandFile extends Component {
 }
 
 export default BandFile
-
+*/

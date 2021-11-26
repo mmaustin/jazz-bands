@@ -21,16 +21,16 @@ class BandsState extends Component {
     handleSubmit = (e) => {
         e.preventDefault();
         let formData = {
-            bandName: this.props.state.bandName,
-            playerOne: this.props.state.playerOne,
-            playerTwo: this.props.state.playerTwo,
-            playerThree: this.props.state.playerThree,
-            playerFour: this.props.state.playerFour,
-            playerFive: this.props.state.playerFive,
-            signatureSong: this.props.state.signatureSong
+            bandName: this.state.bandName,
+            playerOne: this.state.playerOne,
+            playerTwo: this.state.playerTwo,
+            playerThree: this.state.playerThree,
+            playerFour: this.state.playerFour,
+            playerFive: this.state.playerFive,
+            signatureSong: this.state.signatureSong
         };
-        let data = this.props.state.allBands.concat(formData);
-         this.props.state.allBands = data;
+        let data = this.state.allBands.concat(formData);
+         this.setState({allBands: data})
     }
 
     handleChange = (e) => {
@@ -48,50 +48,50 @@ class BandsState extends Component {
                     <input
                         type='text'
                         name='bandName'
-                        onChange={this.props.handleChange}
+                        onChange={this.handleChange}
                         value={this.props.state.bandName}
                     />
                     Name:
                     <input
                         type='text'
                         name='playerOne'
-                        onChange={this.props.handleChange}
-                        value={this.props.state.playerOne}
+                        onChange={this.handleChange}
+                        value={this.state.playerOne}
                     />
                     Name:
                     <input
                         type='text'
                         name='playerTwo'
-                        onChange={this.props.handleChange}
-                        value={this.props.state.playerTwo}
+                        onChange={this.handleChange}
+                        value={this.state.playerTwo}
                     />
                     Name:
                     <input
                         type='text'
                         name='playerThree'
-                        onChange={this.props.handleChange}
-                        value={this.props.state.playerThree}
+                        onChange={this.handleChange}
+                        value={this.state.playerThree}
                     />
                     Name:
                     <input
                         type='text'
                         name='playerFour'
-                        onChange={this.props.handleChange}
-                        value={this.props.state.playerFour}
+                        onChange={this.handleChange}
+                        value={this.state.playerFour}
                     />
                     Name:
                     <input
                         type='text'
                         name='playerFive'
-                        onChange={this.props.handleChange}
-                        value={this.props.state.playerFive}
+                        onChange={this.handleChange}
+                        value={this.state.playerFive}
                     />
                     Signature Song:
                     <input
                         type='text'
                         name='signatureSong'
-                        onChange={this.props.handleChange}
-                        value={this.props.state.signatureSong}
+                        onChange={this.handleChange}
+                        value={this.state.signatureSong}
                     />
                     <input type="submit"/>
                 </form>            
