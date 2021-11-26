@@ -18,6 +18,21 @@ class BandsState extends Component {
         }
     }
 
+    handleSubmit = (e) => {
+        e.preventDefault();
+        let formData = {
+            bandName: this.props.state.bandName,
+            playerOne: this.props.state.playerOne,
+            playerTwo: this.props.state.playerTwo,
+            playerThree: this.props.state.playerThree,
+            playerFour: this.props.state.playerFour,
+            playerFive: this.props.state.playerFive,
+            signatureSong: this.props.state.signatureSong
+        };
+        let data = this.props.state.allBands.concat(formData);
+         this.props.state.allBands = data;
+    }
+
     handleChange = (e) => {
         this.setState({
         [e.target.name]: e.target.value
