@@ -1,4 +1,4 @@
-/* import React from 'react'
+ import React from 'react'
 //import Personnel from './Personnel'
 
 const Band = ({band}) => {
@@ -9,4 +9,4 @@ const Band = ({band}) => {
     )
 }
 
-export default Band */
+export default Band

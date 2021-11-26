@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 //import BandFile from './BandFile';
-//import Bands from './Bands';
+import Band from './Band';
 
 class BandsState extends Component {
 
@@ -30,7 +30,7 @@ class BandsState extends Component {
             signatureSong: this.state.signatureSong
         };
         let data = this.state.allBands.concat(formData);
-         this.setState({allBands: data})
+         this.setState({allBands: data}, () => console.log(this.state.allBands))
     }
 
     handleChange = (e) => {
@@ -49,7 +49,7 @@ class BandsState extends Component {
                         type='text'
                         name='bandName'
                         onChange={this.handleChange}
-                        value={this.props.state.bandName}
+                        value={this.state.bandName}
                     />
                     Name:
                     <input
@@ -94,7 +94,8 @@ class BandsState extends Component {
                         value={this.state.signatureSong}
                     />
                     <input type="submit"/>
-                </form>            
+                </form> 
+                {this.state.allBands.map((band, index) => <Band key={index} band={band}/>)}           
             </div>
         )
     }
