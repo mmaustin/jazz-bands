@@ -19,6 +19,20 @@ class BandsState extends Component {
         }
     }
 
+    iterateBands = (e) => {
+        this.setState(previousState => {
+            if (this.state.iterated){
+                return {
+                    allBands: this.state.allBands
+                }
+            } else {
+                return {
+                    allBands: previousState.allBands.concat([])
+                }
+            }
+        })
+    }
+
     /*componentDidMount(){
         this.interval = setInterval(this.changeText, 5000)
     }
