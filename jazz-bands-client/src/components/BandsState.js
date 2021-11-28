@@ -26,7 +26,7 @@ class BandsState extends Component {
                     allBands: this.state.allBands,
                     iterated: false
                 }
-            })
+            }, () => console.log(this.state.allBands))
         } else {
             this.setState(prevState => {
                 return {
@@ -34,7 +34,7 @@ class BandsState extends Component {
                     .map(b => b.bandName),
                     iterated: true
                 }
-            })
+            }, () => console.log(this.state.allBands))
         }
     }
 
