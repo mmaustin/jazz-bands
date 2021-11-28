@@ -22,16 +22,11 @@ class BandsState extends Component {
         this.interval = setInterval(this.changeText, 5000)
     }
 
-    changeText = () => {
+    /*changeText = () => {
         
         let a = document.getElementsByClassName('colorChange');
-        console.log(a.innterHTML += " or is it?")
-        /*if (a.style.backgroundColor === 'red'){
-            a.style.backgroundColor = 'blue';
-        } else {
-            a.style.backgroundColor = 'red';
-        }*/
-    }
+        a[0].innerHTML += ' Or is it?'
+    }*/
 
 
 
