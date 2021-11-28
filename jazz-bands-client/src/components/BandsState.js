@@ -14,15 +14,16 @@ class BandsState extends Component {
             playerFour: "",
             playerFive:  "",
             signatureSong: "",
-            allBands: []
+            allBands: [],
+            iterated: false
         }
     }
 
-    componentDidMount(){
+    /*componentDidMount(){
         this.interval = setInterval(this.changeText, 5000)
     }
 
-    /*changeText = () => {
+    changeText = () => {
         
         let a = document.getElementsByClassName('colorChange');
         a[0].innerHTML += ' Or is it?'
