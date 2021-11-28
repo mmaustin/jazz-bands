@@ -19,7 +19,7 @@ class BandsState extends Component {
         }
     }
 
-    iterateBands = (e) => {
+    iterateBands = () => {
         this.setState(previousState => {
             if (this.state.iterated){
                 return {
@@ -28,6 +28,7 @@ class BandsState extends Component {
             } else {
                 return {
                     allBands: previousState.allBands.concat([])
+                    .map(b => b.bandName.toUpperCase())
                 }
             }
         })
@@ -123,7 +124,8 @@ class BandsState extends Component {
                     <input type="submit"/>
                 </form> 
                 <p className="colorChange">This is always here.</p>
-                {this.state.allBands.map((band, index) => <Band key={index} band={band}/>)}           
+                {this.state.allBands.map((band, index) => <Band key={index} band={band}/>)} 
+                <button onClick={this.iterateBands}>Click Me!</button>          
             </div>
         )
     }
