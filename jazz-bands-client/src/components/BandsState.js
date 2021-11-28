@@ -20,18 +20,22 @@ class BandsState extends Component {
     }
 
     iterateBands = () => {
-        this.setState(previousState => {
-            if (this.state.iterated){
+        if(this.state.iterated){
+            this.setState(prevState => {
                 return {
-                    allBands: this.state.allBands
+                    allBands: this.state.allBands,
+                    iterated: false
                 }
-            } else {
+            })
+        } else {
+            this.setState(prevState => {
                 return {
-                    allBands: previousState.allBands.concat([])
-                    .map(b => b.bandName.toUpperCase())
+                    allBands: prevState.allBands.concat([])
+                    .map(b => b.bandName),
+                    iterated: true
                 }
-            }
-        })
+            })
+        }
     }
 
     /*componentDidMount(){
