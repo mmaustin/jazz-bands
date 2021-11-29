@@ -25,7 +25,7 @@ class BandsState extends Component {
                 return {
                     allBands: prevState.allBands.concat([])
                     .map(band => {return {...band, bandName: band.bandName
-                    .split( ' ').map(word => word.charAt(0).toUpperCase + word.substring(1).toLowerCase()).join(' ')}}),
+                    .split( ' ').map(word => word.charAt(0).toUpperCase() + word.substring(1).toLowerCase()).join(' ')}}),
                     iterated: false
                 }
             }, () => console.log(this.state.allBands))
@@ -129,7 +129,7 @@ class BandsState extends Component {
                     />
                     <input type="submit"/>
                 </form> 
-                <p className="colorChange">This is always here.</p>
+                {/*<p className="colorChange">This is always here.</p>*/}
                 {this.state.allBands.map((band, index) => <Band key={index} band={band}/>)} 
                 <button onClick={this.iterateBands}>Click Me!</button>          
             </div>
