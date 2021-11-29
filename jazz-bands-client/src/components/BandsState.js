@@ -50,7 +50,13 @@ class BandsState extends Component {
         a[0].innerHTML += ' Or is it?'
     }*/
 
-
+    changeColor = (e) => {
+        if(e.target.backgroundColor === 'blue'){
+            e.target.backgroundColor = 'red'
+        } else {
+            e.target.backgroundColor = 'blue'
+        }
+    }
 
     handleSubmit = (e) => {
         e.preventDefault();
@@ -128,8 +134,7 @@ class BandsState extends Component {
                         value={this.state.signatureSong}
                     />
                     <input type="submit"/>
-                </form> 
-                {/*<p className="colorChange">This is always here.</p>*/}
+                </form>
                 {this.state.allBands.map((band, index) => <Band key={index} band={band}/>)} 
                 <button onClick={this.iterateBands}>Click Me!</button>          
             </div>
