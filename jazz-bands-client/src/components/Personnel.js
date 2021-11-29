@@ -1,4 +1,4 @@
-import React from 'react'
+/* import React from 'react'
 
 const Personnel = () => {
     return(
@@ -8,4 +8,4 @@ const Personnel = () => {
     )
 }
 
-export default Personnel
+export default Personnel */

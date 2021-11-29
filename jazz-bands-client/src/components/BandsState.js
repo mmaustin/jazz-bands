@@ -23,7 +23,9 @@ class BandsState extends Component {
         if(this.state.iterated){
             this.setState(prevState => {
                 return {
-                    allBands: this.state.allBands,
+                    allBands: prevState.allBands.concat([])
+                    .map(band => {return {...band, bandName: band.bandName
+                    .split( ' ').map(word => word.charAt(0).toUpperCase + word.substring(1).toLowerCase()).join(' ')}}),
                     iterated: false
                 }
             }, () => console.log(this.state.allBands))
