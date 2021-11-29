@@ -51,10 +51,10 @@ class BandsState extends Component {
     }*/
 
     changeColor = (e) => {
-        if(e.target.style.backgroundColor === 'blue'){
-            e.target.style.backgroundColor = 'red'
+        if(e.target.style.color === 'blue'){
+            e.target.style.color = 'red'
         } else {
-            e.target.style.backgroundColor = 'blue'
+            e.target.style.color = 'blue'
         }
     }
 
