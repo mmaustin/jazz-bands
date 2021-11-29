@@ -31,7 +31,7 @@ class BandsState extends Component {
             this.setState(prevState => {
                 return {
                     allBands: prevState.allBands.concat([])
-                    .map(b => b.bandName),
+                    .map(band => {return {...band, bandName: band.bandName.toUpperCase()}}),
                     iterated: true
                 }
             }, () => console.log(this.state.allBands))
@@ -62,7 +62,7 @@ class BandsState extends Component {
             signatureSong: this.state.signatureSong
         };
         let data = this.state.allBands.concat(formData);
-         this.setState({allBands: data}, () => console.log(this.state.allBands))
+         this.setState({allBands: data})
     }
 
     handleChange = (e) => {
