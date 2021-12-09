@@ -5,12 +5,12 @@ const Band = ({band, color}) => {
     return(
         <>
             <p onClick={color}>{band.band_name}</p>
-            <p onClick={color}>{band.playerOne}</p>
-            <p onClick={color}>{band.playerTwo}</p>
-            <p onClick={color}>{band.playerThree}</p>
-            <p onClick={color}>{band.playerFour}</p>
-            <p onClick={color}>{band.playerFive}</p>
-            <p onClick={color}>{band.signatureSong}</p>
+            <p onClick={color}>{band.player_one}</p>
+            <p onClick={color}>{band.player_two}</p>
+            <p onClick={color}>{band.player_three}</p>
+            <p onClick={color}>{band.player_four}</p>
+            <p onClick={color}>{band.player_five}</p>
+            <p onClick={color}>{band.signature_song}</p>
         </>
     )
 }
