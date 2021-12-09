@@ -12,7 +12,7 @@ class BandsContainer extends Component {
     render(){
       return (
         <div>
-          <Bands sentenceList={this.props.bands}/>
+          <Bands bands={this.props.bands}/>
         </div>
       );
     }
