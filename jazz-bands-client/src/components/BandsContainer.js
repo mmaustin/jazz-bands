@@ -12,7 +12,7 @@ class BandsContainer extends Component {
     render(){
       return (
         <div>
-          <Bands bands={this.props.bands}/>
+          <Bands bands={this.props.bands} color={this.props.color}/>
         </div>
       );
     }
