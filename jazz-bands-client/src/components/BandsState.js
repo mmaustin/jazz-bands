@@ -40,16 +40,6 @@ class BandsState extends Component {
         }
     }
 
-    /*componentDidMount(){
-        this.interval = setInterval(this.changeText, 5000)
-    }
-
-    changeText = () => {
-        
-        let a = document.getElementsByClassName('colorChange');
-        a[0].innerHTML += ' Or is it?'
-    }*/
-
     changeColor = (e) => {
         if(e.target.style.color === 'blue'){
             e.target.style.color = 'red'
