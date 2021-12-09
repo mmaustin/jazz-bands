@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 //import BandFile from './BandFile';
-import Band from './Band';
+//import Band from './Band';
+import BandsContainer from './BandsContainer';
 
 class BandsState extends Component {
 
@@ -125,7 +126,8 @@ class BandsState extends Component {
                     />
                     <input type="submit"/>
                 </form>
-                {this.state.allBands.map((band, index) => <Band key={index} band={band} color={this.changeColor}/>)} 
+                {/*{this.state.allBands.map((band, index) => <Band key={index} band={band} color={this.changeColor}/>)}*/}
+                <BandsContainer />
                 <button onClick={this.iterateBands}>Click Me!</button>          
             </div>
         )

@@ -4,7 +4,7 @@
 const Band = ({band, color}) => {
     return(
         <>
-            <p onClick={color}>{band.bandName}</p>
+            <p onClick={color}>{band.band_name}</p>
             <p onClick={color}>{band.playerOne}</p>
             <p onClick={color}>{band.playerTwo}</p>
             <p onClick={color}>{band.playerThree}</p>
