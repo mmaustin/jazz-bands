@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 //import BandFile from './BandFile';
 //import Band from './Band';
+import {connect} from 'react-redux'
 import BandsContainer from './BandsContainer';
 
 class BandsState extends Component {
@@ -135,4 +136,8 @@ class BandsState extends Component {
 
 }
 
-export default BandsState
+function mapStateToProps(state) {
+    return { bands: state.bands };
+  }
+
+export default connect(mapStateToProps, null)(BandsState)
