@@ -8,11 +8,15 @@ class BandsContainer extends Component {
       this.props.fetchBands();
     }
   
+    iterateBands = () => {
+      console.log(this.props.bands.map(b => b.band_name.toUpperCase()))
+    }
   
     render(){
       return (
         <div>
           <Bands bands={this.props.bands} color={this.props.color}/>
+          <button onClick={this.iterateBands}>Click Me</button>
         </div>
       );
     }
