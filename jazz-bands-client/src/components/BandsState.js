@@ -139,7 +139,7 @@ class BandsState extends Component {
                     <input type="submit"/>
                 </form>
                 {/*{this.state.allBands.map((band, index) => <Band key={index} band={band} color={this.changeColor}/>)}*/}
-                <BandsContainer color={this.changeColor}/>
+                <BandsContainer color={this.changeColor} iterated={this.state.iterated}/>
                 {/*<button onClick={this.iterateBands}>Click Me!</button>*/}     
             </div>
         )
