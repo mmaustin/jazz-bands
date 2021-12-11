@@ -6,7 +6,7 @@ export const fetchBands = () => {
     };
   }
 
-  export const capBands = id => {
+  export const capBands = () => {
     return {
       type: 'CAP_BANDS'
     }

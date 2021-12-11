@@ -4,7 +4,9 @@ export default function bandsReducer(
 ) {
    switch (action.type){
     case "FETCH_BANDS":
-        return {bands: action.payload}
+        return {bands: action.payload};
+    case "CAP_BANDS":
+        return {bands: state.bands.map(b => b.band_name.toUpperCase())}
     default:
         return state;
    } 
