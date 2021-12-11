@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import { connect } from "react-redux";
 import { fetchBands } from '../actions/bandActions'
+import { capBands } from '../actions/bandActions';
 import Bands from './Bands'
 
 class BandsContainer extends Component {
@@ -8,15 +9,15 @@ class BandsContainer extends Component {
       this.props.fetchBands();
     }
   
-    iterateBands = () => {
-      console.log(this.props.bands.map(b => b.band_name.toUpperCase()))
+    capitalizeBands = () => {
+      this.props.capBands()
     }
   
     render(){
       return (
         <div>
           <Bands bands={this.props.bands} color={this.props.color}/>
-          <button onClick={this.iterateBands}>Click Me</button>
+          <button onClick={this.capitalizeBands}>Click Me</button>
         </div>
       );
     }
@@ -27,4 +28,4 @@ class BandsContainer extends Component {
     return { bands: state.bands };
   }
   
-  export default connect(mapStateToProps, {fetchBands})(BandsContainer);
+  export default connect(mapStateToProps, {fetchBands, capBands})(BandsContainer);
