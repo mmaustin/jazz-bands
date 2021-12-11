@@ -5,3 +5,9 @@ export const fetchBands = () => {
         .then((bands) => dispatch({ type: "FETCH_BANDS", payload: bands }));
     };
   }
+
+  export const capBands = id => {
+    return {
+      type: 'CAP_BANDS'
+    }
+  }
