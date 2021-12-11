@@ -6,8 +6,10 @@ import BandsContainer from './BandsContainer';
 
 class BandsState extends Component {
 
-    constructor(props){
-        super(props);
+
+
+    constructor(){
+        super();
         this.state = {
             bandName: "",
             playerOne: "",
@@ -16,17 +18,21 @@ class BandsState extends Component {
             playerFour: "",
             playerFive:  "",
             signatureSong: "",
-            allBands: this.props.bands,
+            allBands: [],
             iterated: false
         }
     }
 
-    iterateBands = () => {
+    
+
+    /*iterateBands = () => {
+        console.log(this.props.bands.map(band => {return {...band, band_name: band.band_name
+            .split( ' ').map(word => word.charAt(0).toUpperCase() + word.substring(1).toLowerCase()).join(' ')}}))
         if(this.state.iterated){
             this.setState(prevState => {
                 return {
                     allBands: prevState.allBands.concat([])
-                    .map(band => {return {...band, bandName: band.bandName
+                    .map(band => {return {...band, band_name: band.band_name
                     .split( ' ').map(word => word.charAt(0).toUpperCase() + word.substring(1).toLowerCase()).join(' ')}}),
                     iterated: false
                 }
@@ -35,12 +41,12 @@ class BandsState extends Component {
             this.setState(prevState => {
                 return {
                     allBands: prevState.allBands.concat([])
-                    .map(band => {return {...band, bandName: band.bandName.toUpperCase()}}),
+                    .map(band => {return {...band, band_name: band.band_name.toUpperCase()}}),
                     iterated: true
                 }
             }, () => console.log(this.state.allBands))
         }
-    }
+    }*/
 
     changeColor = (e) => {
         if(e.target.style.color === 'blue'){
@@ -134,8 +140,7 @@ class BandsState extends Component {
                 </form>
                 {/*{this.state.allBands.map((band, index) => <Band key={index} band={band} color={this.changeColor}/>)}*/}
                 <BandsContainer color={this.changeColor}/>
-                <button onClick={this.iterateBands}>Click Me!</button>
-                <button onClick={this.checkState}>check state</button>        
+                {/*<button onClick={this.iterateBands}>Click Me!</button>*/}     
             </div>
         )
     }
