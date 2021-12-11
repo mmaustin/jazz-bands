@@ -6,8 +6,8 @@ import BandsContainer from './BandsContainer';
 
 class BandsState extends Component {
 
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.state = {
             bandName: "",
             playerOne: "",
@@ -16,7 +16,7 @@ class BandsState extends Component {
             playerFour: "",
             playerFive:  "",
             signatureSong: "",
-            allBands: [],
+            allBands: this.props.bands,
             iterated: false
         }
     }
@@ -52,6 +52,7 @@ class BandsState extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
+        /* blocked out code is for having state stored in react, minus redux"
         let formData = {
             bandName: this.state.bandName,
             playerOne: this.state.playerOne,
@@ -61,14 +62,18 @@ class BandsState extends Component {
             playerFive: this.state.playerFive,
             signatureSong: this.state.signatureSong
         };
-        let data = this.state.allBands.concat(formData);
-         this.setState({allBands: data})
+        let data = this.state.allBands.concat(formData); */
+         this.setState({allBands: this.props.bands})
     }
 
     handleChange = (e) => {
         this.setState({
         [e.target.name]: e.target.value
         })
+    }
+
+    checkState = () => {
+        console.log(this.props.bands)
     }
 
     render(){
@@ -129,7 +134,8 @@ class BandsState extends Component {
                 </form>
                 {/*{this.state.allBands.map((band, index) => <Band key={index} band={band} color={this.changeColor}/>)}*/}
                 <BandsContainer color={this.changeColor}/>
-                <button onClick={this.iterateBands}>Click Me!</button>          
+                <button onClick={this.iterateBands}>Click Me!</button>
+                <button onClick={this.checkState}>check state</button>        
             </div>
         )
     }
