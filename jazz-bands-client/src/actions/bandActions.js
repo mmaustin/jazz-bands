@@ -6,8 +6,20 @@ export const fetchBands = () => {
     };
   }
 
-  export const capBands = () => {
-    return {
-      type: 'CAP_BANDS'
-    }
+  export const addSentence = (band) => {
+    return (dispatch) => {
+      fetch("http://localhost:3000/bands", {
+        method: 'POST',
+        body: JSON.stringify(band),
+        headers: {'Content-Type': 'application/json'}
+      })
+        .then((response) => response.json())
+        .then((band) => dispatch({ type: "ADD_BAND", payload: band }));
+    };
   }
+
+export const capBands = () => {
+  return {
+    type: 'CAP_BANDS'
+  }
+}

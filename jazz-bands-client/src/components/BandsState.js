@@ -68,8 +68,8 @@ class BandsState extends Component {
             playerFive: this.state.playerFive,
             signatureSong: this.state.signatureSong
         };
-        let data = this.state.allBands.concat(formData); */
-         this.setState({allBands: this.props.bands})
+        let data = this.state.allBands.concat(formData);
+         this.setState({allBands: this.props.bands})*/
     }
 
     handleChange = (e) => {
