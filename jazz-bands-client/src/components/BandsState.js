@@ -10,13 +10,13 @@ class BandsState extends Component {
     constructor(){
         super();
         this.state = {
-            bandName: "",
-            playerOne: "",
-            playerTwo: "",
-            playerThree: "",
-            playerFour: "",
-            playerFive:  "",
-            signatureSong: "",
+            band_name: "",
+            player_one: "",
+            player_two: "",
+            player_three: "",
+            player_four: "",
+            player_five:  "",
+            signature_song: "",
             allBands: [],
             iterated: false
         }
@@ -57,6 +57,10 @@ class BandsState extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
+        this.props.addBand({band_name: this.state.band_name, player_one: this.state.player_one,
+                            player_two: this.state.player_two, player_three: this.state.player_three,
+                            player_four: this.state.player_four, player_five: this.state.player_five,
+                            signature_song: this.state.signature_song})
         /* blocked out code is for having state stored in react, minus redux"
         let formData = {
             bandName: this.state.bandName,
@@ -89,51 +93,51 @@ class BandsState extends Component {
                     Band Name:
                     <input
                         type='text'
-                        name='bandName'
+                        name='band_name'
                         onChange={this.handleChange}
-                        value={this.state.bandName}
+                        value={this.state.band_name}
                     />
                     Trumpet:
                     <input
                         type='text'
-                        name='playerOne'
+                        name='player_one'
                         onChange={this.handleChange}
-                        value={this.state.playerOne}
+                        value={this.state.player_one}
                     />
                     Saxophone:
                     <input
                         type='text'
-                        name='playerTwo'
+                        name='player_two'
                         onChange={this.handleChange}
-                        value={this.state.playerTwo}
+                        value={this.state.player_two}
                     />
                     Piano:
                     <input
                         type='text'
-                        name='playerThree'
+                        name='player_three'
                         onChange={this.handleChange}
-                        value={this.state.playerThree}
+                        value={this.state.player_three}
                     />
                     Bass:
                     <input
                         type='text'
-                        name='playerFour'
+                        name='player_four'
                         onChange={this.handleChange}
-                        value={this.state.playerFour}
+                        value={this.state.player_four}
                     />
                     Drums:
                     <input
                         type='text'
-                        name='playerFive'
+                        name='player_five'
                         onChange={this.handleChange}
-                        value={this.state.playerFive}
+                        value={this.state.player_five}
                     />
                     Signature Song:
                     <input
                         type='text'
-                        name='signatureSong'
+                        name='signature_song'
                         onChange={this.handleChange}
-                        value={this.state.signatureSong}
+                        value={this.state.signature_song}
                     />
                     <input type="submit"/>
                 </form>
