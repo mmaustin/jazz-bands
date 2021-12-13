@@ -1,6 +1,4 @@
 import React, {Component} from 'react'
-//import BandFile from './BandFile';
-//import Band from './Band';
 import {connect} from 'react-redux'
 import BandsContainer from './BandsContainer';
 import {addBand} from '../actions/bandActions'
@@ -148,8 +146,8 @@ class BandsState extends Component {
 
 }
 
-function mapStateToProps(state) {
+/*function mapStateToProps(state) {
     return { bands: state.bands };
-  }
+  }*/
 
-export default connect(mapStateToProps, null)(BandsState)
+export default connect(null, {addBand})(BandsState)
