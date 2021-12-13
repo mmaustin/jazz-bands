@@ -3,6 +3,7 @@ import React, {Component} from 'react'
 //import Band from './Band';
 import {connect} from 'react-redux'
 import BandsContainer from './BandsContainer';
+import {addBand} from '../actions/bandActions'
 
 class BandsState extends Component {
 
