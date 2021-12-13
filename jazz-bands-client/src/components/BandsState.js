@@ -22,31 +22,6 @@ class BandsState extends Component {
         }
     }
 
-    
-
-    /*iterateBands = () => {
-        console.log(this.props.bands.map(band => {return {...band, band_name: band.band_name
-            .split( ' ').map(word => word.charAt(0).toUpperCase() + word.substring(1).toLowerCase()).join(' ')}}))
-        if(this.state.iterated){
-            this.setState(prevState => {
-                return {
-                    allBands: prevState.allBands.concat([])
-                    .map(band => {return {...band, band_name: band.band_name
-                    .split( ' ').map(word => word.charAt(0).toUpperCase() + word.substring(1).toLowerCase()).join(' ')}}),
-                    iterated: false
-                }
-            }, () => console.log(this.state.allBands))
-        } else {
-            this.setState(prevState => {
-                return {
-                    allBands: prevState.allBands.concat([])
-                    .map(band => {return {...band, band_name: band.band_name.toUpperCase()}}),
-                    iterated: true
-                }
-            }, () => console.log(this.state.allBands))
-        }
-    }*/
-
     changeColor = (e) => {
         if(e.target.style.color === 'blue'){
             e.target.style.color = 'red'
@@ -61,18 +36,7 @@ class BandsState extends Component {
                             player_two: this.state.player_two, player_three: this.state.player_three,
                             player_four: this.state.player_four, player_five: this.state.player_five,
                             signature_song: this.state.signature_song})
-        /* blocked out code is for having state stored in react, minus redux"
-        let formData = {
-            bandName: this.state.bandName,
-            playerOne: this.state.playerOne,
-            playerTwo: this.state.playerTwo,
-            playerThree: this.state.playerThree,
-            playerFour: this.state.playerFour,
-            playerFive: this.state.playerFive,
-            signatureSong: this.state.signatureSong
-        };
-        let data = this.state.allBands.concat(formData);
-         this.setState({allBands: this.props.bands})*/
+
     }
 
     handleChange = (e) => {
@@ -141,17 +105,12 @@ class BandsState extends Component {
                     />
                     <input type="submit"/>
                 </form>
-                {/*{this.state.allBands.map((band, index) => <Band key={index} band={band} color={this.changeColor}/>)}*/}
                 <BandsContainer color={this.changeColor} iterated={this.state.iterated}/>
-                {/*<button onClick={this.iterateBands}>Click Me!</button>*/}     
             </div>
         )
     }
 
 }
 
-/*function mapStateToProps(state) {
-    return { bands: state.bands };
-  }*/
 
 export default connect(null, {addBand})(BandsState)
