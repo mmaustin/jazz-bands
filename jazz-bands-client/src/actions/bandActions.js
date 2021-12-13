@@ -6,7 +6,7 @@ export const fetchBands = () => {
     };
   }
 
-  export const addSentence = (band) => {
+  export const addBand = (band) => {
     return (dispatch) => {
       fetch("http://localhost:3000/bands", {
         method: 'POST',
