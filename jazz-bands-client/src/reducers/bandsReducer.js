@@ -12,7 +12,7 @@ export default function bandsReducer(
         };
     case "CAP_BANDS":
         return {bands: state.bands.map(band => {return {...band, band_name: band.band_name
-            .split( ' ').map(word => word.charAt(0).toUpperCase() + word.substring(1).toLowerCase()).join(' ')}})}
+            .split( ' ').map(word => word.toLowerCase()).join(' ')}})}
     default:
         return state;
    } 

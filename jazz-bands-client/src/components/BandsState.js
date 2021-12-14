@@ -33,9 +33,9 @@ class BandsState extends Component {
     handleSubmit = (e) => {
         e.preventDefault();
         this.props.addBand({band_name: this.state.band_name, player_one: this.state.player_one,
-                            player_two: this.state.player_two, player_three: this.state.player_three,
-                            player_four: this.state.player_four, player_five: this.state.player_five,
-                            signature_song: this.state.signature_song})
+            player_two: this.state.player_two, player_three: this.state.player_three,
+            player_four: this.state.player_four, player_five: this.state.player_five,
+            signature_song: this.state.signature_song})
 
     }
 
