@@ -1,5 +1,6 @@
- import React from 'react'
-//import Personnel from './Personnel'
+import React from 'react'
+import {connect} from 'react-redux'
+import { deleteBand } from '../actions/bandActions'
 
 const Band = ({band, color}) => {
     return(
@@ -16,4 +17,4 @@ const Band = ({band, color}) => {
     )
 }
 
-export default Band
+export default connect(null, {deleteBand})(Band)
