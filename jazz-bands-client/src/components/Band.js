@@ -12,7 +12,7 @@ const Band = ({band, color}) => {
             <p onClick={color}>{band.player_four}</p>
             <p onClick={color}>{band.player_five}</p>
             <p onClick={color}>{band.signature_song}</p>
-            <button>Delete Band</button>
+            <button onClick={() => this.props.deleteBand(band.id)}>Delete Band</button>
         </>
     )
 }
