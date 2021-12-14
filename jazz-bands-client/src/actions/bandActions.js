@@ -18,6 +18,13 @@ export const fetchBands = () => {
     };
   }
 
+export const deleteBand = (id) => {
+  return (dispatch) => {
+    fetch(`http://localhost:3000/bands/${id}`, {method: 'DELETE'});
+    dispatch({type: "DELETE_BAND", payload: id})
+  }
+}
+
 export const capBands = () => {
   return {
     type: 'CAP_BANDS'
