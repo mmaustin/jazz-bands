@@ -36,7 +36,7 @@ class BandsState extends Component {
         this.props.addBand({band_name: this.state.band_name, player_one: this.state.player_one,
             player_two: this.state.player_two, player_three: this.state.player_three,
             player_four: this.state.player_four, player_five: this.state.player_five,
-            signature_song: this.state.signature_song})
+            signature_song: this.state.signature_song, picture: this.state.picture})
 
     }
 
@@ -105,7 +105,7 @@ class BandsState extends Component {
                         value={this.state.signature_song}
                     />
                     Picture:
-                    <imput
+                    <input
                         type='text'
                         name='picture'
                         onChange={this.handleChange}
