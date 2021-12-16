@@ -17,6 +17,7 @@ class BandsState extends Component {
             player_four: "",
             player_five:  "",
             signature_song: "",
+            picture: "",
             allBands: [],
             iterated: false
         }
@@ -102,6 +103,13 @@ class BandsState extends Component {
                         name='signature_song'
                         onChange={this.handleChange}
                         value={this.state.signature_song}
+                    />
+                    Picture:
+                    <imput
+                        type='text'
+                        name='picture'
+                        onChange={this.handleChange}
+                        value={this.state.picture}
                     />
                     <input type="submit"/>
                 </form>
