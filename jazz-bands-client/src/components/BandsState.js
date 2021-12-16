@@ -17,7 +17,6 @@ class BandsState extends Component {
             player_four: "",
             player_five:  "",
             signature_song: "",
-            picture: "",
             allBands: [],
             iterated: false
         }
@@ -36,8 +35,7 @@ class BandsState extends Component {
         this.props.addBand({band_name: this.state.band_name, player_one: this.state.player_one,
             player_two: this.state.player_two, player_three: this.state.player_three,
             player_four: this.state.player_four, player_five: this.state.player_five,
-            signature_song: this.state.signature_song, picture: this.state.picture})
-            console.log(this.state.picture)
+            signature_song: this.state.signature_song})
     }
 
     handleChange = (e) => {
@@ -100,13 +98,6 @@ class BandsState extends Component {
                         name='signature_song'
                         onChange={this.handleChange}
                         value={this.state.signature_song}
-                    />
-                    Picture:
-                    <input
-                        type='text'
-                        name='picture'
-                        onChange={this.handleChange}
-                        value={this.state.picture}
                     />
                     <input type="submit"/>
                 </form>
