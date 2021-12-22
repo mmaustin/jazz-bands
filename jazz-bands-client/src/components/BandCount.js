@@ -10,6 +10,7 @@ const BandCount = () => {
     return(
         <div>
             <p>How many times has the band's button been clicked: {count}</p>
+            <p>{document.title}</p>
             <button onClick={() => setCount(count + 1)}>Band's Button</button>
         </div>
     )
