@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import BandsContainer from './BandsContainer';
 import {addBand} from '../actions/bandActions'
 import BandCount from './BandCount'
+import Fetched from './Fetched';
 
 class BandsState extends Component {
 
@@ -104,6 +105,7 @@ class BandsState extends Component {
                 </form>
                 <BandsContainer color={this.changeColor} iterated={this.state.iterated}/>
                 <BandCount />
+                <Fetched />
             </div>
         )
     }
